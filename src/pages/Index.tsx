@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import FeaturedScholarships from "../components/FeaturedScholarships";
+import { Footerdemo } from "../components/ui/footer-section";
 
 const Index = () => {
   return (
@@ -8,6 +9,7 @@ const Index = () => {
       <Navbar />
       <Hero />
       <FeaturedScholarships />
+      <Footerdemo />
     </div>
   );
 };
