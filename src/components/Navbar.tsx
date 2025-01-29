@@ -6,7 +6,7 @@ const navData = {
     url: "/",
     src: "/placeholder.svg", // You can replace this with your logo
     alt: "Eduva logo",
-    title: "Eduva",
+    title: "eduva",
   },
   menu: [
     { title: "Home", url: "/" },
@@ -57,7 +57,7 @@ const navData = {
   ],
   auth: {
     login: { text: "Sign In", url: "/signin" },
-    signup: { text: "Get Started", url: "/signup" },
+    signup: { text: "Start Free →", url: "/signup" },
   },
 };
 

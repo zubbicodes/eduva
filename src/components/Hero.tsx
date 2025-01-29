@@ -3,9 +3,9 @@ import { HeroGeometric } from "./ui/shape-landing-hero";
 const Hero = () => {
   return (
     <HeroGeometric 
-      badge="Empower Edu Hub"
-      title1="Unlock Your"
-      title2="Educational Journey"
+      badge="eduva.edu"
+      title1="Powerd"
+      title2="Education"
     />
   );
 };

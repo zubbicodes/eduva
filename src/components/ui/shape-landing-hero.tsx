@@ -1,8 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { InteractiveHoverButton } from "./interactive-hover-button";
 import { Circle } from "lucide-react";
 import { cn } from "@/lib/utils";
+
 
 function ElegantShape({
     className,
@@ -66,7 +68,9 @@ function ElegantShape({
                     )}
                 />
             </motion.div>
+            
         </motion.div>
+        
     );
 }
 
@@ -177,6 +181,7 @@ function HeroGeometric({
                                 {title2}
                             </span>
                         </h1>
+                        
                     </motion.div>
 
                     <motion.div
@@ -186,11 +191,24 @@ function HeroGeometric({
                         animate="visible"
                     >
                         <p className="text-base sm:text-lg md:text-xl text-white/40 mb-8 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
-                            Access scholarships, study materials, and government schemes all in one place. 
+                            Access scholarships, study materials, and government schemes all in one place.
                             Start your journey to academic success today.
                         </p>
+                        <motion.div
+                            custom={3}
+                            variants={fadeUpVariants}
+                            initial="hidden"
+                            animate="visible"
+                            className="flex justify-center"
+                        >
+                            <InteractiveHoverButton>
+                                Get Started
+                            </InteractiveHoverButton>
+                        </motion.div>
                     </motion.div>
+                    
                 </div>
+                
             </div>
 
             <div className="absolute inset-0 bg-gradient-to-t from-[#030303] via-transparent to-[#030303]/80 pointer-events-none" />
