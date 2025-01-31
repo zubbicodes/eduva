@@ -1,5 +1,6 @@
 import { HeroGeometric } from "./ui/shape-landing-hero";
 
+
 const Hero = () => {
   return (
     <HeroGeometric 

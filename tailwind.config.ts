@@ -19,13 +19,13 @@ export default {
     },
     extend: {
       colors: {
-        primary: "#121212", // Dark grey/black from the text
-        secondary: "#F3F4F6", // Light background color from the card
-        accent: "#f7f7f8", // Highlight yellow
-        background: "#F9FAFB", // Slight off-white from the overall background
-        text: "#fffff", // Deep text color
-        muted: "#9CA3AF", // Grey used for muted text
-        border: "#E5E7EB", // Light grey for separators
+        primary: "#1A365D", // Vibrant blue
+        secondary: "#F3F4F6", // Warm yellow
+        accent: "#319795", // Fresh green
+        background: "#F9FAFB", // Pure white
+        text: "#1A202C", // Dark grey
+        muted: "#718096", // Medium grey
+        border: "#E2E8F0", // Light grey
       },
       animation: {
         "fade-in": "fadeIn 0.5s ease-in-out",

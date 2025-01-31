@@ -1,4 +1,5 @@
 import { Book, Menu, GraduationCap, School, Users } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import {
   Accordion,
@@ -58,7 +59,7 @@ interface Navbar1Props {
 const Navbar1 = ({
   logo = {
     url: "/",
-    src: "/placeholder.svg", // You can replace this with your logo
+    src: "/assets/eduvalogoblack.png",
     alt: "Eduva logo",
     title: "Eduva",
   },
@@ -117,12 +118,11 @@ const Navbar1 = ({
   return (
     <section className="py-4">
       <div className="container">
-        <nav className="hidden justify-between lg:flex">
+        <nav className="hidden justify-between lg:flex items-center">
           <div className="flex items-center gap-6">
-            <a href={logo.url} className="flex items-center gap-2">
-              <img src={logo.src} className="w-8" alt={logo.alt} />
-              <span className="text-lg font-semibold">{logo.title}</span>
-            </a>
+            <Link to={logo.url} className="flex items-center gap-2">
+              <img src={logo.src} className="w-16" alt={logo.alt} />
+            </Link>
             <div className="flex items-center">
               <NavigationMenu>
                 <NavigationMenuList>
@@ -142,10 +142,9 @@ const Navbar1 = ({
         </nav>
         <div className="block lg:hidden">
           <div className="flex items-center justify-between">
-            <a href={logo.url} className="flex items-center gap-2">
-              <img src={logo.src} className="w-8" alt={logo.alt} />
-              <span className="text-lg font-semibold">{logo.title}</span>
-            </a>
+            <Link to={logo.url} className="flex items-center gap-2">
+              <img src={logo.src} className="w-16" alt={logo.alt} />
+            </Link>
             <Sheet>
               <SheetTrigger asChild>
                 <Button variant="outline" size="icon">
@@ -155,12 +154,12 @@ const Navbar1 = ({
               <SheetContent className="overflow-y-auto">
                 <SheetHeader>
                   <SheetTitle>
-                    <a href={logo.url} className="flex items-center gap-2">
-                      <img src={logo.src} className="w-8" alt={logo.alt} />
+                    <Link to={logo.url} className="flex items-center gap-2">
+                      <img src={logo.src} className="w-16" alt={logo.alt} />
                       <span className="text-lg font-semibold">
                         {logo.title}
                       </span>
-                    </a>
+                    </Link>
                   </SheetTitle>
                 </SheetHeader>
                 <div className="my-6 flex flex-col gap-6">
@@ -212,9 +211,9 @@ const renderMenuItem = (item: MenuItem) => {
             <NavigationMenuLink>
               {item.items.map((subItem) => (
                 <li key={subItem.title}>
-                  <a
+                  <Link
                     className="flex select-none gap-4 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-muted hover:text-accent-foreground"
-                    href={subItem.url}
+                    to={subItem.url}
                   >
                     {subItem.icon}
                     <div>
@@ -227,7 +226,7 @@ const renderMenuItem = (item: MenuItem) => {
                         </p>
                       )}
                     </div>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </NavigationMenuLink>
@@ -238,13 +237,13 @@ const renderMenuItem = (item: MenuItem) => {
   }
 
   return (
-    <a
+    <Link
       key={item.title}
+      to={item.url}
       className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-accent-foreground"
-      href={item.url}
     >
       {item.title}
-    </a>
+    </Link>
   );
 };
 
@@ -257,10 +256,10 @@ const renderMobileMenuItem = (item: MenuItem) => {
         </AccordionTrigger>
         <AccordionContent className="mt-2">
           {item.items.map((subItem) => (
-            <a
+            <Link
               key={subItem.title}
               className="flex select-none gap-4 rounded-md p-3 leading-none outline-none transition-colors hover:bg-muted hover:text-accent-foreground"
-              href={subItem.url}
+              to={subItem.url}
             >
               {subItem.icon}
               <div>
@@ -271,7 +270,7 @@ const renderMobileMenuItem = (item: MenuItem) => {
                   </p>
                 )}
               </div>
-            </a>
+            </Link>
           ))}
         </AccordionContent>
       </AccordionItem>
@@ -279,9 +278,9 @@ const renderMobileMenuItem = (item: MenuItem) => {
   }
 
   return (
-    <a key={item.title} href={item.url} className="font-semibold">
+    <Link key={item.title} to={item.url} className="font-semibold">
       {item.title}
-    </a>
+    </Link>
   );
 };
 

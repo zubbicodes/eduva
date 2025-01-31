@@ -151,7 +151,7 @@ function Footerdemo() {
         </div>
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t pt-8 text-center md:flex-row">
           <p className="text-sm text-muted-foreground">
-            © 2024 Eduva. All rights reserved.
+            © 2024 eduva. All rights reserved.
           </p>
           <nav className="flex gap-4 text-sm">
             <a href="/privacy" className="transition-colors hover:text-primary">

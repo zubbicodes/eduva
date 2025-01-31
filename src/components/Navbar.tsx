@@ -1,12 +1,13 @@
 import { Book, GraduationCap, Menu, School, Users } from "lucide-react";
 import { Navbar1 } from "./ui/shadcnblocks-com-navbar1";
+import { Link } from "react-router-dom";
 
 const navData = {
   logo: {
     url: "/",
-    src: "/placeholder.svg", // You can replace this with your logo
+    src: "/assets/eduvalogoblack.png",
     alt: "Eduva logo",
-    title: "eduva",
+    title: "",
   },
   menu: [
     { title: "Home", url: "/" },
